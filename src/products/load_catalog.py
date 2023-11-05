@@ -114,14 +114,14 @@ def verify_local_ddb_running(endpoint,dynamodb):
     exit(1)
 
 if __name__=="__main__":
-    categories_table_name = None
+    categories_table_name = "retaildemostore-Base-7IL2Q920G8JC-Tables-4TYZ7B2L2FO1-CategoriesTable-17YPV98CKECGP"
     categories_file = 'src/products-service/data/categories.yaml'
-    products_table_name = None
+    products_table_name = "retaildemostore-Base-7IL2Q920G8JC-Tables-4TYZ7B2L2FO1-ProductsTable-14OYC0698ZI6N"
     products_file = 'src/products-service/data/products.yaml'
-    carts_table_name = None
+    carts_table_name = "retaildemostore-Base-7IL2Q920G8JC-Tables-4TYZ7B2L2FO1-CartsTable-GYDF6PS85B7R"
     carts_file = 'src/products-service/data/carts.yaml'
     truncate = False
-    endpoint_url = 'http://localhost:3001'
+    endpoint_url = 'https://dynamodb.us-east-1.amazonaws.com'
 
     try:
         opts, args = getopt.getopt(sys.argv[1:], 'h', ['categories-table-name=', 'categories-file=', 'products-table-name=', 'products-file=', 'truncate', 'endpoint-url=', 'carts-table-name=', 'carts-file='])
@@ -176,10 +176,10 @@ if __name__=="__main__":
                     "IndexName": "name-index",
                     "KeySchema": [{"AttributeName": "name", "KeyType": "HASH"}],
                     "Projection": {"ProjectionType": "ALL"},
-                    "ProvisionedThroughput": {
-                        "ReadCapacityUnits": 5,
-                        "WriteCapacityUnits": 5,
-                    }
+                    # "ProvisionedThroughput": {
+                    #     "ReadCapacityUnits": 5,
+                    #     "WriteCapacityUnits": 5,
+                    # }
                 }
             ]
         )
@@ -190,6 +190,7 @@ if __name__=="__main__":
 
         print(f'Loading categories from {categories_file}')
         with open(categories_file, 'r') as f:
+            
             categories = yaml.safe_load(f)
 
         print(f'Updating categories in table {categories_table_name}')
@@ -218,19 +219,19 @@ if __name__=="__main__":
                     "IndexName": "category-index",
                     "KeySchema": [{"AttributeName": "category", "KeyType": "HASH"}],
                     "Projection": {"ProjectionType": "ALL"},
-                    "ProvisionedThroughput": {
-                        "ReadCapacityUnits": 5,
-                        "WriteCapacityUnits": 5,
-                    }
+                    # "ProvisionedThroughput": {
+                    #     "ReadCapacityUnits": 5,
+                    #     "WriteCapacityUnits": 5,
+                    # }
                 },
                 {
                     "IndexName": "featured-index",
                     "KeySchema": [{"AttributeName": "featured", "KeyType": "HASH"}],
                     "Projection": {"ProjectionType": "ALL"},
-                    "ProvisionedThroughput": {
-                        "ReadCapacityUnits": 5,
-                        "WriteCapacityUnits": 5,
-                    }
+                    # "ProvisionedThroughput": {
+                    #     "ReadCapacityUnits": 5,
+                    #     "WriteCapacityUnits": 5,
+                    # }
                 }
             ]
                     
@@ -273,10 +274,10 @@ if __name__=="__main__":
                     "IndexName": "username-index",
                     "KeySchema": [{"AttributeName": "username", "KeyType": "HASH"}],
                     "Projection": {"ProjectionType": "ALL"},
-                    "ProvisionedThroughput": {
-                        "ReadCapacityUnits": 5,
-                        "WriteCapacityUnits": 5,
-                    }
+                    # "ProvisionedThroughput": {
+                    #     "ReadCapacityUnits": 5,
+                    #     "WriteCapacityUnits": 5,
+                    # }
                 }
             ]
                     

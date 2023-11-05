@@ -1,36 +1,4 @@
-# Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
-# SPDX-License-Identifier: MIT-0
 
-'''
-Utility script that can be run locally to load/reload the catalog in DynamoDB tables.
-This script can update either the categories table, products table, or both. Each table
-can also be truncated before loading data when you want to completely replace the table's
-contents.
-
-By default the script will load categories and products from the default location in the
-repo. That is, the corresponding YAML files in the src/products-service/data/ directory.
-You can override the file location on the command-line.
-
-Usage:
-
-python load_catalog.py --categories-table-name CATEGORIES_TABLE_NAME [--categories-file CATEGORIES_FILE] --products-table-name PRODUCTS_TABLE_NAME [--products_file PRODUCTS_FILE] [--truncate] --carts-table-name CARTS_TABLE_NAME [--carts_file CARTS_FILE] --endpoint-url ENDPOINT_URL] --endpoint-url ENDPOINT_URL
-
-Where:
-CATEGORIES_TABLE_NAME is the DynamoDB table name for categories
-CATEGORIES_FILE is the location on your local machine where the categories.yaml is located (defaults to src/products-service/data/categories.yaml)
-PRODUCTS_TABLE_NAME is the DynamoDB table name for products
-PRODUCTS_FILE is the location on your local machine where the products.yaml is located (defaults to src/products-service/data/products.yaml)
-CARTS_TABLE_NAME is the DynamoDB table name for carts
-CARTS_FILE is the location on your local machine where the carts.yaml is located (defaults to src/products-service/data/carts.yaml)
-truncate is a flag that will truncate the table before loading data (defaults to False)
-endpoint-url is the endpoint URL for the DynamoDB service (defaults to 'http://localhost:3001')
-
-Examples:
-
-The script will only truncate (optional) and load the table(s) specified.
-
-Your AWS credentials are discovered from your current environment.
-'''
 
 import sys
 import getopt

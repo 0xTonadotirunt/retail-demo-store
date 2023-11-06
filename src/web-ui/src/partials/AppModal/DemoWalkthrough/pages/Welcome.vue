@@ -1,13 +1,12 @@
 <template>
   <DemoWalkthroughPageLayout class="page-container text-center" :showNav="false">
-    <h1 class="heading mb-4">Welcome to the Retail Demo Store tour!</h1>
+    <h1 class="heading mb-4">About BestiesShopHub!</h1>
     <p class="text mb-5">
-      Take our guided tour to get familiar with the demo. We'll show you the tasks and elements we recommend to use to
-      see the power of user personalization.
+      We are an online platform selling tech goods is a digital marketplace dedicated to the sale and distribution of a wide range of technology-related products and gadgets. We provide a convenient and accessible way for consumers and businesses to purchase items such as smartphones, laptops, tablets, gaming consoles, accessories, software, and various other electronic devices. We often feature product listings, detailed specifications, user reviews, and secure payment options. 
     </p>
     <div class="d-flex flex-column flex-sm-row-reverse justify-content-center">
-      <button class="take-tour btn btn-primary mb-3 mb-sm-0" @click="nextTourPage">Take Tour</button>
-      <button class="skip btn btn-outline-primary mr-sm-3" @click="endTour">Skip</button>
+      <!-- <button class="take-tour btn btn-primary mb-3 mb-sm-0" @click="nextTourPage">Take Tour</button> -->
+      <button class="skip btn btn-outline-primary mr-sm-3" @click="endTour">Continue</button>
     </div>
   </DemoWalkthroughPageLayout>
 </template>

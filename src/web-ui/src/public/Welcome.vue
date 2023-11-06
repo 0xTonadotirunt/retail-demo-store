@@ -1,9 +1,9 @@
 <template>
   <Layout :showNav="false" :showFooter="false" :showTextAlerts="false" :showDemoGuide="false" backgroundColor="var(--aws-squid-ink)">
     <div class="container mb-2 text-left">
-      <h1 class="heading my-5 text-center">Welcome to the Retail Demo Store!</h1>
+      <h1 class="heading my-5 text-center">Welcome to BestiesShopHub!</h1>
 
-      <p>
+      <!-- <p>
         The Retail Demo Store is a demo platform to demonstrate how AWS infrastructure and services can be used to build
         personalized customer experiences across multiple channels of engagement.
       </p>
@@ -12,9 +12,9 @@
         The Retail Demo Store mimics an online store with products, users and user-interactions to showcase the
         personalized product recommendations a shopper would receive based on historical and real time click-through
         behavior.
-      </p>
+      </p> -->
 
-      <div class="mt-2 d-flex flex-column flex-lg-row align-items-lg-center">
+      <!-- <div class="mt-2 d-flex flex-column flex-lg-row align-items-lg-center">
         <div class="mb-2 mb-lg-0">AWS Services Included:</div>
 
         <ul
@@ -24,7 +24,7 @@
             <ServiceBadge :text="service.text" :src="service.src"></ServiceBadge>
           </li>
         </ul>
-      </div>
+      </div> -->
 
       <div class="mt-2 mb-4 my-sm-5 d-flex flex-column align-items-center align-items-sm-end">
         <div class="d-flex flex-column flex-sm-row align-items-center">

@@ -17,7 +17,7 @@
 
     <TextAlerts v-if="showTextAlerts" class="mt-5"></TextAlerts>
 
-    <Footer v-if="showFooter" class="my-4 container"></Footer>
+    <!-- <Footer v-if="showFooter" class="my-4 container"></Footer> -->
 
     <AppModal></AppModal>
 
